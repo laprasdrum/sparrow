@@ -21,3 +21,4 @@ my first Android-Kotlin project
 
 ## Frameworks
 - [Kotlin製の仕様記述フレームワークSpekの紹介](http://qiita.com/tenten0213/items/95978e20e74a06e45a98)
+- [Spek – A Specification Framework](http://blog.jetbrains.com/kotlin/2014/02/speka-specification-framework/)
