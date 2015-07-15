@@ -46,4 +46,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'org.jetbrains.kotlin:kotlin-stdlib:0.12.613'
+    compile 'com.android.support:design:22.2.0'
 }
