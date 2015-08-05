@@ -5,4 +5,11 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="action_settings">settings</string>
+    <string name="search_title">search</string>
+
+    <string-array name="friends">
+        <item>mori</item>
+        <item>morinaka ryu</item>
+        <item>nakahara syun</item>
+    </string-array>
 </resources>
