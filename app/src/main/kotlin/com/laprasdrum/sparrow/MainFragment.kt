@@ -13,10 +13,16 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import butterknife.bindView
+import com.laprasdrum.sparrow.inject.Injector
+import com.laprasdrum.sparrow.model.User
+import javax.inject.Inject
 import kotlin.properties.Delegates
 
 
-class MainFragment : Fragment(), SearchView.OnQueryTextListener, View.OnFocusChangeListener {
+public class MainFragment : Fragment(), SearchView.OnQueryTextListener, View.OnFocusChangeListener {
+
+    var user: User? = null
+        @Inject set
 
     val toolbar: Toolbar by bindView(R.id.toolbar)
     val textLabel: TextView by bindView(R.id.label)
@@ -37,6 +43,10 @@ class MainFragment : Fragment(), SearchView.OnQueryTextListener, View.OnFocusCha
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super<Fragment>.onActivityCreated(savedInstanceState)
+        Injector.get().inject(this)
+        //        (getActivity().getApplication() as SampleApplication).component().inject(this)
+
+        Log.d("tag", user?.register("key"))
 
         setupInitValues()
         setupToolbar()
@@ -65,7 +75,8 @@ class MainFragment : Fragment(), SearchView.OnQueryTextListener, View.OnFocusCha
         textLabel.setText("hello")
         helloButton.setOnClickListener {
             Log.i("tag", "hello")
-            Log.d("tag", "world")
+            Log.d("tag", user?.register("key"))
+            //            UserActions.upgradeSalary()
         }
     }
 
