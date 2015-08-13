@@ -10,7 +10,7 @@ class UserSpec : Spek() {
             on("put short message") {
                 val actual = user.register("val")
                 it("should be same with register") {
-                    assertEquals("register", actual)
+                    assertEquals("registered", actual)
                 }
             }
         }
