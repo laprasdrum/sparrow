@@ -8,18 +8,17 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-Module
-public class AndroidModule(private var application: Application) {
-
-    Provides Singleton ForApplication fun provideApplication(): Application {
+@Module
+public open class AndroidModule(private var application: Application) {
+    @Provides @Singleton ForApplication fun provideApplication(): Application {
         return application
     }
 
-    Provides Singleton fun provideApplicationContext(): Context {
+    @Provides @Singleton fun provideApplicationContext(): Context {
         return application.getApplicationContext()
     }
 
-    Provides Singleton fun provideDefaultSharedPreferences(): SharedPreferences {
+    @Provides @Singleton fun provideDefaultSharedPreferences(): SharedPreferences {
         return PreferenceManager.getDefaultSharedPreferences(application)
     }
 }

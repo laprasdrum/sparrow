@@ -44,7 +44,6 @@ public class MainFragment : Fragment(), SearchView.OnQueryTextListener, View.OnF
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super<Fragment>.onActivityCreated(savedInstanceState)
         Injector.get().inject(this)
-        //        (getActivity().getApplication() as SampleApplication).component().inject(this)
 
         Log.d("tag", user?.register("key"))
 

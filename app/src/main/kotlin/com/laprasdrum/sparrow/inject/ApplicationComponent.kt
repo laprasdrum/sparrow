@@ -7,8 +7,8 @@ import com.laprasdrum.sparrow.model.Company
 import dagger.Component
 import javax.inject.Singleton
 
-Singleton
-Component(modules = arrayOf(AndroidModule::class, ApplicationModule::class))
+@Singleton
+@Component(modules = arrayOf(AndroidModule::class, ApplicationModule::class))
 public interface ApplicationComponent {
     public fun inject(application: SampleApplication)
     public fun inject(activity: MainActivity)

@@ -6,10 +6,9 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-Module
-public class ApplicationModule {
-    Provides Singleton fun provideUser(): User {
+@Module
+public open class ApplicationModule {
+    @Provides @Singleton fun provideUser(): User {
         return User(PayrollEdit())
     }
 }
-
