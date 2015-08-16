@@ -1,10 +1,7 @@
 package com.laprasdrum.sparrow.model
 
-import android.app.Application
-import android.app.Instrumentation
-import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
-import com.laprasdrum.sparrow.inject.Injector
+import com.laprasdrum.sparrow.model.Inject.TestInjector
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -16,9 +13,7 @@ import kotlin.test.assertNotNull
 public class CompanyTest {
 
     @Before public fun setup() {
-        val instrumentation: Instrumentation = InstrumentationRegistry.getInstrumentation()
-        val app: Application = instrumentation.getTargetContext().getApplicationContext() as Application
-        Injector.init(app)
+        TestInjector.init()
     }
 
     @After public fun teardown() {
@@ -27,11 +22,8 @@ public class CompanyTest {
 
     @Test public fun checkCompanyInjection() {
         var company = Company()
-        //        Mockito.`when`(company.user?.register("register")).thenReturn("registeredeee")
 
         assertNotNull(company.user)
-        assertEquals(company.checkUser(), "registered", "must load")
+        assertEquals(company.checkUser(), "registered with admin", "must load")
     }
 }
-
-

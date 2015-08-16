@@ -17,7 +17,7 @@ public class UserTest {
     }
 
     @Test public fun shouldBeCallRegistration() {
-        var user: User = User(PayrollEdit())
-        assertEquals(user.register("register"), "registered", "test")
+        var user: User = User(CompanyAdmin())
+        assertEquals(user.register("register"), "registered with admin", "test")
     }
 }

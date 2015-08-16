@@ -16,4 +16,4 @@ class PayrollEdit() : Employee {
     }
 }
 
-class User(payrollEdit: PayrollEdit) : Employee by payrollEdit
+class User(companyAdmin: CompanyAdmin) : Employee by companyAdmin
