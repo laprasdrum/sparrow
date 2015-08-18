@@ -63,7 +63,7 @@ public class SampleFragment : Fragment() {
 
     private fun setupViews() {
         button1.setOnClickListener {
-            sampleActions?.editCompanyName("freee k.k.")
+            sampleActions?.editCompanyName("beluga co.ltd,")
         }
 
         button2.setOnClickListener {
@@ -71,7 +71,7 @@ public class SampleFragment : Fragment() {
             //                logView.append("network request sent\n")
             //            }))
             //            logView.append(response + "\n")
-            sampleActions?.editCompanyProfile("c-fo", "freee@c-fo.com")
+            sampleActions?.editCompanyProfile("kitten inc.", "laprasdrum@yuyacat.com")
         }
     }
 
