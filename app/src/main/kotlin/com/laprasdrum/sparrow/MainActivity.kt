@@ -10,7 +10,8 @@ public class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, MainFragment.newInstance())
+                //                .add(R.id.container, MainFragment.newInstance())
+                .add(R.id.container, SampleFragment.newInstance())
                 .commit()
     }
 

@@ -70,6 +70,7 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.0'
     provided 'org.glassfish:javax.annotation:10.0-b28'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'io.reactivex:rxandroid:1.0.1'
 
     androidTestCompile('org.jetbrains.spek:spek:0.1-SNAPSHOT') {
         exclude module: 'kotlin-stdlib'
