@@ -1,7 +1,6 @@
 package com.laprasdrum.sparrow.flux.stores
 
 import android.util.Log
-import com.laprasdrum.sparrow.inject.Injector
 import com.laprasdrum.sparrow.model.Company
 import rx.subjects.PublishSubject
 
@@ -11,10 +10,6 @@ class SampleStore {
     var editedCompanyProfileSubject: PublishSubject<String> = PublishSubject.create()
 
     var company: Company? = null
-
-    init {
-        Injector.get().inject(this)
-    }
 
     fun onInitialized() {
         company = Company()
